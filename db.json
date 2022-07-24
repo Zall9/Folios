@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "LAWEB",
+      "description": "Interface d'analyse en temps réel de données pédagogiques en React",
+      "image": "/static/image/1200px-Lizard.jpg"
+    },
+    {
+      "id": "2",
+      "title": "PlaceHold",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "image": "/static/image/1200px-Lizard.jpg"
+    },
+    {
+      "id": "3",
+      "title": "PlaceHold",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "image": "/static/image/1200px-Lizard.jpg"
+    },
+    {
+      "id": "4",
+      "title": "PlaceHold",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "image": "/static/image/1200px-Lizard.jpg"
+    },
+    {
+      "id": "5",
+      "title": "PlaceHold",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "image": "/static/image/1200px-Lizard.jpg"
+    },
+    {
+      "id": "6",
+      "title": "PlaceHold",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "image": "/static/image/1200px-Lizard.jpg"
+    }
+  ]
+}
