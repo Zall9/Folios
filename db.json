@@ -87,5 +87,12 @@
       "date": "Juin 2021 -Aout",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
     }
+  ],
+  "about": [
+    {
+      "id": "1",
+      "title": "Paul Delifer",
+      "description": "étudiant en master Informatique à l'université de savoie Mont-Blanc"
+    }
   ]
 }

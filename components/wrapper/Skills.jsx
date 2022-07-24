@@ -31,7 +31,16 @@ const Skills = (props) => {
   return (
     <Grid alignItems="center" justifyContent="center" container spacing={3}>
       <Grid item xs={12}>
-        <Slide direction="right" in={lastYpos > 0 && lastYpos < 1} mountOnEnter>
+        <Slide
+          direction="right"
+          in={lastYpos > 0 && lastYpos < 1}
+          mountOnEnter
+          timeout={{
+            appear: 500,
+            enter: 500,
+            exit: 500,
+          }}
+        >
           <Typography variant="h4">Mes compétences</Typography>
         </Slide>
       </Grid>

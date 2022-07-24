@@ -26,7 +26,6 @@ const Appbar = () => {
       direction="down"
       in={true}
       mountOnEnter
-      unmountOnExit
       easing={{}}
       timeout={{
         appear: 1000,

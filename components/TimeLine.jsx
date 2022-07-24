@@ -21,6 +21,14 @@ const TimeLine = (props) => {
         console.log(err);
       });
   }, []);
+  const colors = [
+    "primary",
+    "secondary",
+    "success",
+    "info",
+    "warning",
+    "error",
+  ];
   return (
     <>
       <Timeline>
@@ -33,14 +41,14 @@ const TimeLine = (props) => {
               {...(props.in && index == 0
                 ? {
                     timeout: {
-                      enter: index * 1000 + 1000,
-                      exit: index * 1000 + 1000,
+                      enter: index * 1000 + 1500,
+                      exit: 1000,
                     },
                   }
                 : {
                     timeout: {
                       enter: index * 1000 + 1000,
-                      exit: index * 1000 + 1000,
+                      exit: 1000,
                     },
                   })}
             >
@@ -48,14 +56,14 @@ const TimeLine = (props) => {
                 {index < data.length - 1 ? (
                   <>
                     <TimelineSeparator>
-                      <TimelineDot />
+                      <TimelineDot color={colors[index]} variant="outlined" />
                       <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent>{item.title}</TimelineContent>
                   </>
                 ) : (
                   <>
-                    <TimelineDot />
+                    <TimelineDot color={colors[index]} variant="outlined" />
                     <TimelineContent>{item.title}</TimelineContent>
                   </>
                 )}
