@@ -27,9 +27,7 @@ const Appbar = () => {
       in={true}
       mountOnEnter
       unmountOnExit
-      easing={{
-        enter: "cubic-bezier(0.9, 0.02, 0.19, 1)",
-      }}
+      easing={{}}
       timeout={{
         appear: 1000,
         enter: 1000,
@@ -37,8 +35,9 @@ const Appbar = () => {
       }}
     >
       <AppBar
-        position="static"
+        position="sticky"
         sx={{
+          width: "100%",
           fontFamily: " Arial, Helvetica, sans-serif",
           fontSize: " 1rem",
           backgroundColor: " rgba(250, 250, 250, 0.3)",

@@ -4,37 +4,88 @@
       "id": "1",
       "title": "LAWEB",
       "description": "Interface d'analyse en temps réel de données pédagogiques en React",
-      "image": "/static/image/1200px-Lizard.jpg"
+      "image": "/static/images/1200px-Lizard.jpg"
     },
     {
       "id": "2",
       "title": "PlaceHold",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-      "image": "/static/image/1200px-Lizard.jpg"
+      "image": "/static/images/1200px-Lizard.jpg"
     },
     {
       "id": "3",
       "title": "PlaceHold",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-      "image": "/static/image/1200px-Lizard.jpg"
+      "image": "/static/images/1200px-Lizard.jpg"
     },
     {
       "id": "4",
       "title": "PlaceHold",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-      "image": "/static/image/1200px-Lizard.jpg"
+      "image": "/static/images/1200px-Lizard.jpg"
     },
     {
       "id": "5",
       "title": "PlaceHold",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-      "image": "/static/image/1200px-Lizard.jpg"
+      "image": "/static/images/1200px-Lizard.jpg"
     },
     {
       "id": "6",
       "title": "PlaceHold",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-      "image": "/static/image/1200px-Lizard.jpg"
+      "image": "/static/images/1200px-Lizard.jpg"
+    }
+  ],
+  "skills": [
+    {
+      "id": "1",
+      "title": "React",
+      "image": "/static/images/react.png"
+    },
+    {
+      "id": "2",
+      "title": "NodeJS",
+      "image": "/static/images/js.png"
+    },
+    {
+      "id": "3",
+      "title": "SQL",
+      "image": "/static/images/sql.png"
+    },
+    {
+      "id": "4",
+      "title": "MongoDB",
+      "image": "/static/images/mongo.png"
+    },
+
+    {
+      "id": "5",
+      "title": "Git",
+      "image": "/static/images/git.png"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "1",
+      "title": "Développeur React",
+      "company": "LaWeb",
+      "date": "Juin 2021 -Aout",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+    },
+    {
+      "id": "2",
+      "title": "Développeur React",
+      "company": "LaWeb",
+      "date": "Juin 2021 -Aout",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+    },
+    {
+      "id": "3",
+      "title": "Développeur React",
+      "company": "LaWeb",
+      "date": "Juin 2021 -Aout",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
     }
   ]
 }

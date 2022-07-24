@@ -34,11 +34,9 @@ const CardGrid = () => {
   };
 
   return (
-    <Container fixed>
-      <Grid alignItems="center" justifyContent="center" container spacing={3}>
-        {cards(data)}
-      </Grid>
-    </Container>
+    <Grid alignItems="center" justifyContent="center" container spacing={3}>
+      {cards(data)}
+    </Grid>
   );
 };
 
