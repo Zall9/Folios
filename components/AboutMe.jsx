@@ -1,8 +1,9 @@
-import { Fade, Slide, Typography } from "@mui/material";
+import { Fade, Slide, Typography, Zoom } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
-import { useEffect, useLayoutEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const AboutMe = (props) => {
   const [data, setData] = useState([]);
   const backgroundImage = "";
@@ -94,6 +95,16 @@ const AboutMe = (props) => {
                   &nbsp;&nbsp;&nbsp;{"à" + item.description.split("à")[1]}
                 </Typography>
               </Slide>
+              <Zoom in={true} style={{ transitionDelay: "500ms" }} mountOnEnter>
+                <GitHubIcon
+                  sx={{ color: "white", width: "4ch", height: "4ch" }}
+                />
+              </Zoom>
+              <Zoom in={true} style={{ transitionDelay: "750ms" }} mountOnEnter>
+                <LinkedInIcon
+                  sx={{ color: "white", width: "4ch", height: "4ch" }}
+                ></LinkedInIcon>
+              </Zoom>
             </>
           );
         })}
