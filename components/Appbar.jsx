@@ -1,23 +1,9 @@
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Slide,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Slide, Toolbar, Typography } from "@mui/material";
 import { Container } from "@mui/system";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
-import { useState } from "react";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Project", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Appbar = () => {

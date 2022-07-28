@@ -10,8 +10,6 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import path from "path";
-import getConfig from "next/config";
 import TimeLine from "../TimeLine";
 
 const Skills = (props) => {
@@ -60,37 +58,46 @@ const Skills = (props) => {
               >
                 <ImageListItem key={item.image}>
                   <Box
-                    key={item.id + "box"}
                     sx={{
-                      borderRadius: "100%",
-                      position: "relative",
-                      backgroundColor: "lightgrey",
-                      opacity: 0.5,
-                      width: "8ch",
-                      height: "8ch",
-                    }}
-                  ></Box>
-                  <Box
-                    component="div"
-                    sx={{
-                      position: "absolute",
-                      paddingTop: "0.12rem",
-                      paddingLeft: "0.12rem",
-                      justifyContent: "center",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    <Image
-                      alt=""
-                      key={item.id + "image"}
-                      width="69%"
-                      height="69%"
-                      src={"http://localhost:3001/" + item.image}
-                    />
+                    <Box
+                      key={item.id + "box"}
+                      sx={{
+                        borderRadius: "100%",
+                        position: "relative",
+                        backgroundColor: "lightgrey",
+                        opacity: 0.5,
+                        width: "8ch",
+                        height: "8ch",
+                      }}
+                    ></Box>
+                    <Box
+                      component="div"
+                      sx={{
+                        position: "absolute",
+                        paddingTop: "0.12rem",
+                        paddingLeft: "0.12rem",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        key={item.id + "image"}
+                        width="69%"
+                        height="69%"
+                        src={"http://localhost:3001/" + item.image}
+                      />
+                    </Box>
+                    <Typography key={item.id + "typo"} variant="h5" sx={{}}>
+                      {item.title}
+                    </Typography>
                   </Box>
-                  <Typography key={item.id + "typo"} variant="h5">
-                    {item.title}
-                  </Typography>
                 </ImageListItem>
               </Grow>
             );

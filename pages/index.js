@@ -3,16 +3,24 @@ import Appbar from "../components/Appbar";
 import CardGrid from "../components/wrapper/CardGrid";
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Container, Grid, Slide, Slider } from "@mui/material";
+import {
+  CircularProgress,
+  Container,
+  Grid,
+  Slide,
+  Slider,
+} from "@mui/material";
 import Skills from "../components/wrapper/Skills";
 import AboutMe from "../components/AboutMe";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const [lastYpos, setLastYpos] = useState(0);
-  const [widthBox, setWidthBox] = useState(0);
+  const [doOnce, setDoOnce] = useState(false);
   useEffect(() => {
-    document.getEme;
+    if (!doOnce) {
+      setTimeout(setDoOnce, 1000, true);
+    }
     return scrollYProgress.onChange((latest) => {
       console.log("Page scroll: ", latest);
       setLastYpos(latest);
@@ -20,26 +28,32 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Appbar></Appbar>
-      <Container disableGutters maxWidth="lg">
-        <Grid>
+      {doOnce == false ? (
+        <CircularProgress></CircularProgress>
+      ) : (
+        <>
+          <Appbar></Appbar>
           <AboutMe></AboutMe>
 
-          <Grid
-            item
-            sx={{
-              marginBottom: "1rem",
-            }}
-            xs={4}
-          >
-            <Skills lastYpos={lastYpos} setLastYpos={setLastYpos}></Skills>
-          </Grid>
+          <Container disableGutters maxWidth="lg">
+            <Grid>
+              <Grid
+                item
+                sx={{
+                  marginBottom: "1rem",
+                }}
+                xs={4}
+              >
+                <Skills lastYpos={lastYpos} setLastYpos={setLastYpos}></Skills>
+              </Grid>
 
-          <Grid item xs={4}>
-            <CardGrid></CardGrid>
-          </Grid>
-        </Grid>
-      </Container>
+              <Grid item xs={4}>
+                <CardGrid></CardGrid>
+              </Grid>
+            </Grid>
+          </Container>
+        </>
+      )}
     </>
   );
 }

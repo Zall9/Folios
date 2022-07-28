@@ -63,6 +63,22 @@
       "id": "5",
       "title": "Git",
       "image": "/static/images/git.png"
+    },
+
+    {
+      "id": "6",
+      "title": "Python",
+      "image": "/static/images/python.png"
+    },
+    {
+      "id": "7",
+      "title": "PHP",
+      "image": "/static/images/php.png"
+    },
+    {
+      "id": "8",
+      "title": "Android Studio",
+      "image": "/static/images/studio.png"
     }
   ],
   "experiences": [
