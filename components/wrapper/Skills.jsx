@@ -26,12 +26,14 @@ const Skills = (props) => {
         console.log(err);
       });
   }, []);
+  const IN = lastYpos > 0.35 && lastYpos < 1;
+
   return (
     <Grid alignItems="center" justifyContent="center" container spacing={3}>
       <Grid item xs={12}>
         <Slide
           direction="right"
-          in={lastYpos > 0 && lastYpos < 1}
+          in={IN}
           mountOnEnter
           timeout={{
             appear: 500,
@@ -39,11 +41,27 @@ const Skills = (props) => {
             exit: 500,
           }}
         >
-          <Typography variant="h4">Mes compétences</Typography>
+          <Box
+            component="div"
+            sx={{
+              position: "absolute",
+              display: "flex",
+            }}
+          >
+            <Typography sx={{ position: "relative" }} variant="h1">
+              Mes compétences
+            </Typography>
+            <Typography
+              sx={{ position: "relative", color: "#b8b8b8" }}
+              variant="h3"
+            >
+              Mes spécialités
+            </Typography>
+          </Box>
         </Slide>
       </Grid>
       <Grid item xs={5}>
-        <ImageList cols={3}>
+        <ImageList sx={{ paddingTop: "6.5rem" }} cols={3}>
           {data?.map((item) => {
             return (
               <Grow
@@ -54,7 +72,7 @@ const Skills = (props) => {
                   exit: 500,
                 }}
                 key={"grow" + item.id}
-                in={lastYpos > 0 && lastYpos < 1}
+                in={IN}
               >
                 <ImageListItem key={item.image}>
                   <Box
@@ -105,7 +123,7 @@ const Skills = (props) => {
         </ImageList>
       </Grid>
       <Grid item xs={6}>
-        <TimeLine in={lastYpos > 0 && lastYpos < 1}></TimeLine>
+        <TimeLine in={IN}></TimeLine>
       </Grid>
     </Grid>
   );

@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Skills from "../components/wrapper/Skills";
 import AboutMe from "../components/AboutMe";
+import TimelineExp from "../components/wrapper/TimeLineExp";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -34,7 +35,6 @@ export default function Home() {
         <>
           <Appbar></Appbar>
           <AboutMe></AboutMe>
-
           <Container disableGutters maxWidth="lg">
             <Grid>
               <Grid
@@ -52,6 +52,7 @@ export default function Home() {
               </Grid>
             </Grid>
           </Container>
+          <TimelineExp></TimelineExp>
         </>
       )}
     </>

@@ -6,7 +6,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import { Grow } from "@mui/material";
+import { Box, Grow, Typography } from "@mui/material";
 
 const TimeLine = (props) => {
   const [data, setData] = useState([]);
@@ -30,8 +30,8 @@ const TimeLine = (props) => {
     "error",
   ];
   return (
-    <>
-      <Timeline>
+    <Box sx={{ paddingTop: "6.5rem" }}>
+      <Timeline position="alternate">
         {data?.map((item, index) => {
           return (
             <Grow
@@ -59,12 +59,38 @@ const TimeLine = (props) => {
                       <TimelineDot color={colors[index]} variant="outlined" />
                       <TimelineConnector />
                     </TimelineSeparator>
-                    <TimelineContent>{item.title}</TimelineContent>
+                    <TimelineContent>
+                      {
+                        <>
+                          <Typography>{item.title}</Typography>
+                          <Typography
+                            sx={{
+                              color: "#aaaaaa",
+                            }}
+                          >
+                            {item.description}
+                          </Typography>
+                        </>
+                      }
+                    </TimelineContent>
                   </>
                 ) : (
                   <>
                     <TimelineDot color={colors[index]} variant="outlined" />
-                    <TimelineContent>{item.title}</TimelineContent>
+                    <TimelineContent>
+                      {
+                        <>
+                          <Typography>{item.title}</Typography>
+                          <Typography
+                            sx={{
+                              color: "#aaaaaa",
+                            }}
+                          >
+                            {item.description}
+                          </Typography>
+                        </>
+                      }
+                    </TimelineContent>
                   </>
                 )}
               </TimelineItem>
@@ -72,7 +98,7 @@ const TimeLine = (props) => {
           );
         })}
       </Timeline>
-    </>
+    </Box>
   );
 };
 

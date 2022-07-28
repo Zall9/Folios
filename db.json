@@ -84,21 +84,35 @@
   "experiences": [
     {
       "id": "1",
-      "title": "Développeur React",
+      "title": "Documentation",
       "company": "LaWeb",
       "date": "Juin 2021 -Aout",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
     },
     {
       "id": "2",
-      "title": "Développeur React",
+      "title": "Recettage",
       "company": "LaWeb",
       "date": "Juin 2021 -Aout",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
     },
     {
       "id": "3",
-      "title": "Développeur React",
+      "title": "Developpement",
+      "company": "LaWeb",
+      "date": "Juin 2021 -Aout",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+    },
+    {
+      "id": "4",
+      "title": "Agile",
+      "company": "LaWeb",
+      "date": "Juin 2021 -Aout",
+      "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
+    },
+    {
+      "id": "5",
+      "title": "Cahier des charges",
       "company": "LaWeb",
       "date": "Juin 2021 -Aout",
       "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "
