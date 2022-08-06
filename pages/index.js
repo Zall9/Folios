@@ -35,6 +35,11 @@ export default function Home() {
         <>
           <Appbar></Appbar>
           <AboutMe></AboutMe>
+          <Box>
+            <Container disableGutters maxWidth="lg">
+              <TimelineExp></TimelineExp>
+            </Container>
+          </Box>
           <Container disableGutters maxWidth="lg">
             <Grid>
               <Grid
@@ -52,7 +57,6 @@ export default function Home() {
               </Grid>
             </Grid>
           </Container>
-          <TimelineExp></TimelineExp>
         </>
       )}
     </>

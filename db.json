@@ -124,5 +124,73 @@
       "title": "Paul Delifer",
       "description": "étudiant en master Informatique à l'université de savoie Mont-Blanc"
     }
+  ],
+  "cv": [
+    {
+      "id": "1",
+      "title": "Début de ma licence Informatique",
+      "date": "1567290791",
+      "description": "étudiant en master Informatique à l'université de savoie Mont-Blanc",
+      "lieu": "université de savoie mont-blanc"
+    },
+    {
+      "id": "2",
+      "title": "HairBook",
+      "date": "1598913191",
+      "description": "Projet Universitaire: Réalisation d'un site de reservation de rendez-vous dans un salon de coiffure",
+      "technologies": ["PHP", "MySQL", "HTML", "CSS"],
+      "lieu": "université de savoie mont-blanc"
+    },
+    {
+      "id": "3",
+      "title": "Hive",
+      "date": "1609457591",
+      "description": "Projet Universitaire: Réalisation d'une application Android native facilitant le partage de documents et le travail collaboratif",
+      "technologies": ["Android Studio", "Java", "PHP", "MySQL", "Gradle"],
+      "lieu": "université de savoie mont-blanc"
+    },
+    {
+      "id": "4",
+      "title": "LAWEB",
+      "date": "1640993591",
+      "description": "Projet Universitaire: Réalisation de 3 API REST et leurs documentations pour un jeu serieux ainsi qu'une interface d'analyse de données pédagogiques en temps réel",
+      "technologies": [
+        "Docker",
+        "NodeJS",
+        "TypeScript",
+        "Javascript",
+        "MongoDB",
+        "Mongoose",
+        "SocketIo",
+        "Swagger",
+        "OpenAPI",
+        "AsyncAPI",
+        "React",
+        "Redux",
+        "MUI"
+      ],
+      "lieu": "université de savoie mont-blanc"
+    },
+    {
+      "id": "5",
+      "title": "LAWEB",
+      "date": "1654036391",
+      "description": "Projet Universitaire: Réalisation d'un site de reservation de rendez-vous dans un salon de coiffure",
+      "technologies": [
+        "NodeJS",
+        "Javascript",
+        "React",
+        "Redux",
+        "MUI",
+        "Python",
+        "Docker",
+        "MongoDB",
+        "Mongoose",
+        "SocketIo",
+        "Swagger",
+        "OpenAPI"
+      ],
+      "lieu": "université de savoie mont-blanc"
+    }
   ]
 }
