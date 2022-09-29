@@ -11,21 +11,11 @@ import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import TimeLine from "../TimeLine";
-
+import { db } from "../../db.js";
 const Skills = (props) => {
   const lastYpos = props.lastYpos;
   console.log("last", lastYpos);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get(process.env.NEXT_PUBLIC_API + "/skills")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const data = db.skills;
   const IN = lastYpos > 0.35 && lastYpos < 1;
 
   return (
@@ -109,7 +99,7 @@ const Skills = (props) => {
                         key={item.id + "image"}
                         width="69%"
                         height="69%"
-                        src={"http://localhost:3001/" + item.image}
+                        src={item.image}
                       />
                     </Box>
                     <Typography key={item.id + "typo"} variant="h5" sx={{}}>

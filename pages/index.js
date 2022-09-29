@@ -51,10 +51,10 @@ export default function Home() {
               >
                 <Skills lastYpos={lastYpos} setLastYpos={setLastYpos}></Skills>
               </Grid>
-
+              {/* 
               <Grid item xs={4}>
                 <CardGrid></CardGrid>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Container>
         </>

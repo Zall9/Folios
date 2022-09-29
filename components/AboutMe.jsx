@@ -6,27 +6,19 @@ import IconButton from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LkIcon from "./LkIcon";
 import GithubIcon from "./GithubIcon";
+import { db } from "../db";
 const AboutMe = (props) => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const backgroundImage = "";
-  useEffect(() => {
-    axios
-      .get(process.env.NEXT_PUBLIC_API + "/about")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const data = db.about;
 
-    const maDiv = document.getElementById("about-me");
-    if (maDiv) {
-      maDiv.style.backgroundImage = `url(/static/images/code.png)`;
-      maDiv.style.backgroundSize = "100% 100%";
-      maDiv.style.backgroundRepeat = "no-repeat";
-      maDiv.style.backgroundColor = "";
-    }
-  }, []);
+  const maDiv = document.getElementById("about-me");
+  if (maDiv) {
+    maDiv.style.backgroundImage = `url(/static/images/code.png)`;
+    maDiv.style.backgroundSize = "100% 100%";
+    maDiv.style.backgroundRepeat = "no-repeat";
+    maDiv.style.backgroundColor = "";
+  }
 
   return (
     <Box

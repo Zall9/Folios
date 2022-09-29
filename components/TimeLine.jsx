@@ -7,20 +7,11 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { Box, Grow, Typography } from "@mui/material";
-
+import { db } from "../db";
 const TimeLine = (props) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios
-      .get(process.env.NEXT_PUBLIC_API + "/experiences")
-      .then((res) => {
-        setData(res.data);
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  const data = db.experiences;
+  console.log("data", data);
+  console.log("db", db);
   const colors = [
     "primary",
     "secondary",
