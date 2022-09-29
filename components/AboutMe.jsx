@@ -66,28 +66,28 @@ const AboutMe = (props) => {
                 </Fade>
               </Box>
               <Slide direction="left" in={true} mountOnEnter>
+                <Box sx={{marginLeft:'6%'}}>
                 <Typography
                   sx={{
                     color: "#fbfbfbfb",
-                    marginTop: "1%",
-                    marginLeft: "27%",
                   }}
                   variant="h4"
                 >
                   &nbsp;&nbsp;&nbsp;{item.description.split("à")[0]}
                 </Typography>
+                </Box>
               </Slide>
               <Slide direction="left" in={true} mountOnEnter>
+                <Box sx={{marginLeft:'12%'}}>
                 <Typography
                   sx={{
                     color: "#fbfbfbfb",
-                    marginTop: "1%",
-                    marginLeft: "33%",
                   }}
                   variant="h5"
                 >
                   &nbsp;&nbsp;&nbsp;{"à" + item.description.split("à")[1]}
                 </Typography>
+                </Box>
               </Slide>
               <Box
                 component="div"

@@ -35,28 +35,15 @@ export default function Home() {
         <>
           <Appbar></Appbar>
           <AboutMe></AboutMe>
-          <Box>
-            <Container disableGutters maxWidth="lg">
-              <TimelineExp></TimelineExp>
-            </Container>
+          <Box sx={{justifyContent:'center',
+          alignItems:'center',
+          display:'flex',
+          flexDirection:'column',
+        }}>
+          <TimelineExp></TimelineExp>
+          
+          <Skills lastYpos={lastYpos} setLastYpos={setLastYpos}></Skills>
           </Box>
-          <Container disableGutters maxWidth="lg">
-            <Grid>
-              <Grid
-                item
-                sx={{
-                  marginBottom: "1rem",
-                }}
-                xs={4}
-              >
-                <Skills lastYpos={lastYpos} setLastYpos={setLastYpos}></Skills>
-              </Grid>
-              {/* 
-              <Grid item xs={4}>
-                <CardGrid></CardGrid>
-              </Grid> */}
-            </Grid>
-          </Container>
         </>
       )}
     </>

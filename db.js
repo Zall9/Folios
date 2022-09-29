@@ -47,44 +47,52 @@ export const db = {
     {
       id: "1",
       title: "React",
-      image: "/static/images/react.png",
+      
     },
     {
       id: "2",
       title: "NodeJS",
-      image: "/static/images/js.png",
+      
     },
     {
       id: "3",
       title: "SQL",
-      image: "/static/images/sql.png",
+      
     },
     {
       id: "4",
       title: "MongoDB",
-      image: "/static/images/mongo.png",
+      
     },
 
     {
       id: "5",
       title: "Git",
-      image: "/static/images/git.png",
+      
     },
 
     {
       id: "6",
       title: "Python",
-      image: "/static/images/python.png",
+      
     },
     {
       id: "7",
       title: "PHP",
-      image: "/static/images/php.png",
+      
     },
     {
       id: "8",
       title: "Android Studio",
-      image: "/static/images/studio.png",
+      
+    },
+    {
+      id: "9",
+      title: "Docker",
+    },
+    {
+      id: "10",
+      title: "Flutter",
     },
   ],
   experiences: [
@@ -94,7 +102,7 @@ export const db = {
       company: "LaWeb",
       date: "Juin 2021 -Aout",
       description:
-        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        "",
     },
     {
       id: "2",
@@ -102,7 +110,7 @@ export const db = {
       company: "LaWeb",
       date: "Juin 2021 -Aout",
       description:
-        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        "Lorem ",
     },
     {
       id: "3",
@@ -110,7 +118,7 @@ export const db = {
       company: "LaWeb",
       date: "Juin 2021 -Aout",
       description:
-        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        "Lorem ",
     },
     {
       id: "4",
@@ -118,7 +126,7 @@ export const db = {
       company: "LaWeb",
       date: "Juin 2021 -Aout",
       description:
-        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        "Lorem ",
     },
     {
       id: "5",
@@ -126,7 +134,7 @@ export const db = {
       company: "LaWeb",
       date: "Juin 2021 -Aout",
       description:
-        "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+        "Lorem ",
     },
   ],
   about: [
@@ -140,9 +148,8 @@ export const db = {
   cv: [
     {
       id: "1",
-      title: "Début de ma licence Informatique",
+      title: "Licence Informatique",
       date: "1567290791",
-      icon: "()=>'FaMortarPestle'",
       description: "",
     },
     {
@@ -204,5 +211,19 @@ export const db = {
         "OpenAPI",
       ],
     },
+    {
+      id: "6",
+      title: "Licence Informatique",
+      date: "1654036391",
+      description: "",
+    },
+    {
+      id: "7",
+      title: "Master Informatique",
+      date: "1654036391",
+      description:"Début de mon master Informatique",
+
+    },
+    
   ],
 };
