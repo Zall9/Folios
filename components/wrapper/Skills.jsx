@@ -1,23 +1,11 @@
-import {
-  Grid,
-  Grow,
-  Icon,
-  ImageList,
-  ImageListItem,
-  Slide,
-  Typography,
-} from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import axios from "axios";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import TimeLine from "../TimeLine";
 import { db } from "../../db.js";
-import { GrReactjs,GrMysql,GrDocker } from "react-icons/gr";
+import { GrReactjs, GrMysql, GrDocker } from "react-icons/gr";
 import { FaNodeJs, FaPhp } from "react-icons/fa";
-import { SiAndroidstudio,SiMongodb, SiPython } from "react-icons/si";
+import { SiAndroidstudio, SiMongodb, SiPython } from "react-icons/si";
 import { DiGit } from "react-icons/di";
-import {RiFlutterFill} from 'react-icons/ri';
+import { RiFlutterFill } from "react-icons/ri";
 const Skills = (props) => {
   const lastYpos = props.lastYpos;
   console.log("last", lastYpos);
@@ -40,14 +28,25 @@ const Skills = (props) => {
   });
   console.log("DATA ", data);
   return (
-    <Box sx={{display:'flex', alignItems:'center',justifyContent:'center',
-    flexDirection:'row', paddingTop: "3rem" }}>
-    
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "row",
+        paddingTop: "3rem",
+      }}
+    >
       {data?.map((item, index) => {
         return (
-          <Box key={item.id + "tech"} sx={{
-            display: "flex", flexDirection: "column", alignItems: "center",
-          }}>
+          <Box
+            key={item.id + "tech"}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
             {iconList[index]}
             <Typography key={item.id + "typo"} variant="h5" sx={{}}>
               {item.title}

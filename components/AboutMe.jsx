@@ -1,11 +1,6 @@
-import { Button, Fade, Slide, Typography, Zoom } from "@mui/material";
+import { Fade, Slide, Typography, Zoom } from "@mui/material";
 import { Box } from "@mui/system";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import IconButton from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LkIcon from "./LkIcon";
-import GithubIcon from "./GithubIcon";
 import { db } from "../db";
 const AboutMe = (props) => {
   // const [data, setData] = useState([]);
@@ -24,7 +19,7 @@ const AboutMe = (props) => {
     <Box
       sx={{
         backgroundColor: "#121212",
-        height: "90vh",
+        height: "calc(100vh - 60px)",
       }}
     >
       <Box
@@ -33,15 +28,20 @@ const AboutMe = (props) => {
           height: "100%",
         }}
       >
-        {data?.map((item) => {
+        {data?.map((item, index) => {
           return (
-            <>
-              <Box sx={{ display: "flex", marginLeft: "25%" }}>
+            <Box key={"c"}>
+              <Box
+                sx={{
+                  display: "flex",
+                }}
+              >
                 <Slide direction="right" in={true} mountOnEnter unmountOnExit>
                   <Typography
                     sx={{
                       color: "#fbfbfbfb",
-                      marginTop: "25%",
+                      marginLeft: "calc(10vw + " + index * 10 + "rem)",
+                      marginTop: "calc(20vh + " + index * 10 + "rem)",
                     }}
                     variant="h1"
                   >
@@ -50,7 +50,11 @@ const AboutMe = (props) => {
                 </Slide>
                 <Fade in={true} mountOnEnter unmountOnExit>
                   <Typography
-                    sx={{ color: "rgb(129, 156, 216)", marginTop: "25%" }}
+                    sx={{
+                      color: "rgb(129, 156, 216)",
+                      marginLeft: "calc(" + index * 10 + "rem)",
+                      marginTop: "calc(20vh + " + index * 10 + "rem)",
+                    }}
                     variant="h1"
                   >
                     {item.title.split(" ")[1].split(["lifer"])}
@@ -58,7 +62,12 @@ const AboutMe = (props) => {
                 </Fade>
                 <Fade in={true} mountOnEnter unmountOnExit>
                   <Typography
-                    sx={{ color: "#fbfbfbfb", marginTop: "25%" }}
+                    sx={{
+                      color: "#fbfbfbfb",
+                      marginTop: "25%",
+                      marginLeft: "calc(" + index * 10 + "rem)",
+                      marginTop: "calc(20vh + " + index * 10 + "rem)",
+                    }}
                     variant="h1"
                   >
                     {item.title.split(" ")[1].split(["De"])}
@@ -66,27 +75,27 @@ const AboutMe = (props) => {
                 </Fade>
               </Box>
               <Slide direction="left" in={true} mountOnEnter>
-                <Box sx={{marginLeft:'6%'}}>
-                <Typography
-                  sx={{
-                    color: "#fbfbfbfb",
-                  }}
-                  variant="h4"
-                >
-                  &nbsp;&nbsp;&nbsp;{item.description.split("à")[0]}
-                </Typography>
+                <Box sx={{ marginLeft: "6%" }}>
+                  <Typography
+                    sx={{
+                      color: "#fbfbfbfb",
+                    }}
+                    variant="h4"
+                  >
+                    &nbsp;&nbsp;&nbsp;{item.description.split("à")[0]}
+                  </Typography>
                 </Box>
               </Slide>
               <Slide direction="left" in={true} mountOnEnter>
-                <Box sx={{marginLeft:'12%'}}>
-                <Typography
-                  sx={{
-                    color: "#fbfbfbfb",
-                  }}
-                  variant="h5"
-                >
-                  &nbsp;&nbsp;&nbsp;{"à" + item.description.split("à")[1]}
-                </Typography>
+                <Box sx={{ marginLeft: "12%" }}>
+                  <Typography
+                    sx={{
+                      color: "#fbfbfbfb",
+                    }}
+                    variant="h5 Fade,"
+                  >
+                    &nbsp;&nbsp;&nbsp;{"à" + item.description.split("à")[1]}
+                  </Typography>
                 </Box>
               </Slide>
               <Box
@@ -108,7 +117,7 @@ const AboutMe = (props) => {
                   </div>
                 </Zoom>
               </Box>
-            </>
+            </Box>
           );
         })}
       </Box>

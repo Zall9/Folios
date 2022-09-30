@@ -47,44 +47,36 @@ export const db = {
     {
       id: "1",
       title: "React",
-      
     },
     {
       id: "2",
       title: "NodeJS",
-      
     },
     {
       id: "3",
       title: "SQL",
-      
     },
     {
       id: "4",
       title: "MongoDB",
-      
     },
 
     {
       id: "5",
       title: "Git",
-      
     },
 
     {
       id: "6",
       title: "Python",
-      
     },
     {
       id: "7",
       title: "PHP",
-      
     },
     {
       id: "8",
       title: "Android Studio",
-      
     },
     {
       id: "9",
@@ -101,40 +93,35 @@ export const db = {
       title: "Documentation",
       company: "LaWeb",
       date: "Juin 2021 -Aout",
-      description:
-        "",
+      description: "",
     },
     {
       id: "2",
       title: "Recettage",
       company: "LaWeb",
       date: "Juin 2021 -Aout",
-      description:
-        "Lorem ",
+      description: "Lorem ",
     },
     {
       id: "3",
       title: "Developpement",
       company: "LaWeb",
       date: "Juin 2021 -Aout",
-      description:
-        "Lorem ",
+      description: "Lorem ",
     },
     {
       id: "4",
       title: "Agile",
       company: "LaWeb",
       date: "Juin 2021 -Aout",
-      description:
-        "Lorem ",
+      description: "Lorem ",
     },
     {
       id: "5",
       title: "Cahier des charges",
       company: "LaWeb",
       date: "Juin 2021 -Aout",
-      description:
-        "Lorem ",
+      description: "Lorem ",
     },
   ],
   about: [
@@ -157,7 +144,7 @@ export const db = {
       title: "HairBook",
       date: "1598913191",
       description:
-        "Projet Universitaire: Réalisation d'un site de reservation de rendez-vous dans un salon de coiffure",
+        "site de reservation de rendez-vous dans un salon de coiffure",
       technologies: ["PHP", "MySQL", "HTML", "CSS"],
     },
     {
@@ -165,15 +152,19 @@ export const db = {
       title: "Hive",
       date: "1609457591",
       description:
-        "Projet Universitaire: Réalisation d'une application Android native facilitant le partage de documents et le travail collaboratif",
-      technologies: ["Android Studio", "Java", "PHP", "MySQL", "Gradle"],
+        " application Android centrée sur le partage de documents pédagogiques",
+      content1:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      content2:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      technologies: ["A.Studio", "Java", "PHP", "MySQL", "Gradle"],
     },
     {
       id: "4",
       title: "LAWEB",
       date: "1640993591",
       description:
-        "Projet Universitaire: Réalisation de 3 API REST et leurs documentations pour un jeu serieux ainsi qu'une interface d'analyse de données pédagogiques en temps réel",
+        "API REST et leurs documentations pour un jeu serieux ainsi qu'une interface d'analyse de données pédagogiques en temps réel",
       technologies: [
         "Docker",
         "NodeJS",
@@ -194,8 +185,7 @@ export const db = {
       id: "5",
       title: "LAWEB",
       date: "1654036391",
-      description:
-        "Projet Universitaire: Réalisation d'un site de reservation de rendez-vous dans un salon de coiffure",
+      description: "site de reservation dans un salon de coiffure",
       technologies: [
         "NodeJS",
         "Javascript",
@@ -221,9 +211,7 @@ export const db = {
       id: "7",
       title: "Master Informatique",
       date: "1654036391",
-      description:"Début de mon master Informatique",
-
+      description: "Début de mon master Informatique",
     },
-    
   ],
 };

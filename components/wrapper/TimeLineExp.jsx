@@ -9,9 +9,9 @@ import { db } from "../../db";
 import Skills from "./Skills";
 import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
 import { GoMortarBoard } from "react-icons/go";
-import {AiOutlineScissor} from 'react-icons/ai';
-import {GiArtificialHive} from 'react-icons/gi';
-import {SiSololearn} from 'react-icons/si';
+import { AiOutlineScissor } from "react-icons/ai";
+import { GiArtificialHive } from "react-icons/gi";
+import { SiSololearn } from "react-icons/si";
 /*
 Format: YYYY-MM-DD
 Note: Make sure dates are sorted in increasing order
@@ -35,12 +35,20 @@ function convertTimestampToDate(timestamp) {
 const TimelineExp = (props) => {
   const data = db.cv;
   let VALUES = [];
-  const colorsList = ['#87a2c7','#9c2919',"#b8b8b8","#87a2c7","#212932","#87a2c7","#9c2919"];
+  const colorsList = [
+    "#87a2c7",
+    "#9c2919",
+    "#b8b8b8",
+    "#87a2c7",
+    "#212932",
+    "#87a2c7",
+    "#9c2919",
+  ];
   data.map((item) => {
     VALUES.push(convertTimestampToDate(item.date));
   });
   console.log("VALUES", VALUES);
-  
+
   const dataWithoutDateAndId = data.map(({ id, ...rest }) => rest);
   const listIcon = [
     GoMortarBoard,
@@ -50,29 +58,24 @@ const TimelineExp = (props) => {
     SiSololearn,
     GoMortarBoard,
     GoMortarBoard,
-    
-  ]
-  dataWithoutDateAndId.forEach((v,index) => {
+  ];
+  dataWithoutDateAndId.forEach((v, index) => {
     v.icon = listIcon[index];
-  })
+  });
   return (
-    <Box sx={{ paddingTop: "3rem" , width:'85%'}}>
-    
-    
-      <Timeline minEvents={5} placeholder>
-        {dataWithoutDateAndId.map(
-          (item, index) => (
-            (
-              <TimelineEvent
-                color={colorsList[index]}
-                key={index}
-                icon={item.icon}
-                title={item.title}
-                subtitle={convertTimestampToDate(item.date)}
-              />
-            )
-          )
-        )}
+    <Box sx={{ paddingTop: "3rem", width: "85%" }}>
+      <Timeline minEvents={5} maxEvents={10}>
+        {dataWithoutDateAndId.map((item, index) => (
+          <>
+            <TimelineEvent
+              color={colorsList[index]}
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              subtitle={convertTimestampToDate(item.date)}
+            />
+          </>
+        ))}
       </Timeline>
     </Box>
   );

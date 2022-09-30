@@ -13,6 +13,7 @@ import {
 import Skills from "../components/wrapper/Skills";
 import AboutMe from "../components/AboutMe";
 import TimelineExp from "../components/wrapper/TimeLineExp";
+import Hive from "../components/Hive";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -35,14 +36,16 @@ export default function Home() {
         <>
           <Appbar></Appbar>
           <AboutMe></AboutMe>
-          <Box sx={{justifyContent:'center',
-          alignItems:'center',
-          display:'flex',
-          flexDirection:'column',
-        }}>
-          <TimelineExp></TimelineExp>
-          
-          <Skills lastYpos={lastYpos} setLastYpos={setLastYpos}></Skills>
+          <Hive></Hive>
+          <Box
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {/* <TimelineExp></TimelineExp> */}
           </Box>
         </>
       )}
