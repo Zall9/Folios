@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <>
       {
-        <>
+        <Box sx={{ backgroundColor: "#000000" }}>
           <Appbar></Appbar>
           <AboutMe></AboutMe>
           <Hive></Hive>
@@ -41,7 +41,7 @@ export default function Home() {
           >
             {/* <TimelineExp></TimelineExp> */}
           </Box>
-        </>
+        </Box>
       }
     </>
   );

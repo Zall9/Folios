@@ -20,6 +20,9 @@ const LkIcon = () => {
       </IconButton>
       <IconButton>
         <GitHubIcon
+          onClick={(event) => {
+            window.open("https://github.com/zall9", "_blank");
+          }}
           sx={{
             color: "white",
             width: "4ch",

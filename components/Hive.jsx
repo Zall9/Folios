@@ -25,7 +25,7 @@ const Hive = () => {
     <SiGradle color={color} size={size} key={4} />,
   ];
   return (
-    <Box sx={{ backgroundColor: "#121212", paddingTop: "25vh" }}>
+    <Box sx={{ backgroundColor: "#121212", paddingTop: "28vh" }}>
       <Box
         sx={{
           backgroundColor: "#121212",

@@ -25,7 +25,7 @@ const Appbar = () => {
           width: "100%",
           fontFamily: " Arial, Helvetica, sans-serif",
           fontSize: " 1rem",
-          backgroundColor: " rgba(250, 250, 250, 0.3)",
+          backgroundColor: " rgba(255, 255, 255, 0.3)",
           padding: "30px",
           borderRadius: "20px",
           backdropFilter: "blur(20px)",
