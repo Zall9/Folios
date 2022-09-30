@@ -17,12 +17,62 @@ const Hive = () => {
   console.log("dataHS", data);
   const size = 112;
   const color = "#f5f5f5";
+  const style = {
+    ".changeColor": {
+      color: "#f5f5f5",
+      animation: "changeColor 1s infinite",
+    },
+    ".changeColor:hover": {
+      color: "#faa91e",
+      animation: "changeColor 1s infinite",
+    },
+  };
   const icons = [
-    <SiAndroidstudio color={color} size={size} key={0} />,
-    <SiJava color={color} size={size} key={1} />,
-    <SiPhp color={color} size={size} key={2} />,
-    <GrMysql color={color} size={size} key={3} />,
-    <SiGradle color={color} size={size} key={4} />,
+    <span key="span1" style={style}>
+      <SiAndroidstudio
+        color={color}
+        size={size}
+        key={0}
+        onMouseOver={({ target }) => (target.style.color = "#faa91e")}
+        onMouseOut={({ target }) => (target.style.color = "#f5f5f5")}
+      />
+    </span>,
+    <span key="span2" style={style}>
+      <SiJava
+        color={color}
+        size={size}
+        key={1}
+        onMouseOver={({ target }) => (target.style.color = "#faa91e")}
+        onMouseOut={({ target }) => (target.style.color = "#f5f5f5")}
+      />
+    </span>,
+    <span key="span3" style={style}>
+      <SiPhp
+        color={color}
+        size={size}
+        key={2}
+        onMouseOver={({ target }) => (target.style.color = "#faa91e")}
+        onMouseOut={({ target }) => (target.style.color = "#f5f5f5")}
+      />
+    </span>,
+    <span key="span4" style={style}>
+      <GrMysql
+        color={color}
+        size={size}
+        key={3}
+        onMouseOver={({ target }) => (target.style.color = "#faa91e")}
+        onMouseOut={({ target }) => (target.style.color = "#f5f5f5")}
+      />
+    </span>,
+    <span key="span5" style={style}>
+      <SiGradle
+        color={color}
+        size={size}
+        key={4}
+        onMouseOver={({ target }) => (target.style.color = "#faa91e")}
+        onMouseOut={({ target }) => (target.style.color = "#f5f5f5")}
+      />
+    </span>,
   ];
   return (
     <Box sx={{ backgroundColor: "#121212", paddingTop: "28vh" }}>
