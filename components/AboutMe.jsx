@@ -2,18 +2,22 @@ import { Fade, Slide, Typography, Zoom } from "@mui/material";
 import { Box } from "@mui/system";
 import LkIcon from "./LkIcon";
 import { db } from "../db";
+import { useEffect } from "react";
 const AboutMe = (props) => {
   // const [data, setData] = useState([]);
   const backgroundImage = "";
   const data = db.about;
-
-  const maDiv = document.getElementById("about-me");
-  if (maDiv) {
-    maDiv.style.backgroundImage = `url(/static/images/code.jpg)`;
-    maDiv.style.backgroundSize = "100% 100%";
-    maDiv.style.backgroundRepeat = "no-repeat";
-    maDiv.style.backgroundColor = "";
-  }
+  useEffect(() => {
+    return () => {
+      const maDiv = document?.getElementById("about-me");
+      if (maDiv) {
+        maDiv.style.backgroundImage = `url(/static/images/code.jpg)`;
+        maDiv.style.backgroundSize = "100% 100%";
+        maDiv.style.backgroundRepeat = "no-repeat";
+        maDiv.style.backgroundColor = "";
+      }
+    };
+  }, []);
 
   return (
     <Box
