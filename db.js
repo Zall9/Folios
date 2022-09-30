@@ -152,7 +152,7 @@ export const db = {
       title: "Hive",
       date: "1609457591",
       description:
-        " application Android centrée sur le partage de documents pédagogiques",
+        " Application Android centrée sur le partage de documents pédagogiques",
       content1:
         "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
       content2:

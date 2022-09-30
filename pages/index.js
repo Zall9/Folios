@@ -18,11 +18,7 @@ import Hive from "../components/Hive";
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const [lastYpos, setLastYpos] = useState(0);
-  const [doOnce, setDoOnce] = useState(false);
   useEffect(() => {
-    if (!doOnce) {
-      setTimeout(setDoOnce, 1000, true);
-    }
     return scrollYProgress.onChange((latest) => {
       console.log("Page scroll: ", latest);
       setLastYpos(latest);
@@ -30,25 +26,23 @@ export default function Home() {
   }, []);
   return (
     <>
-      {doOnce == false ? (
-        <CircularProgress></CircularProgress>
-      ) : (
-        <>
-          <Appbar></Appbar>
-          <AboutMe></AboutMe>
-          <Hive></Hive>
-          <Box
-            sx={{
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            {/* <TimelineExp></TimelineExp> */}
-          </Box>
-        </>
-      )}
+      (
+      <>
+        <Appbar></Appbar>
+        <AboutMe></AboutMe>
+        <Hive></Hive>
+        <Box
+          sx={{
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {/* <TimelineExp></TimelineExp> */}
+        </Box>
+      </>
+      )
     </>
   );
 }
