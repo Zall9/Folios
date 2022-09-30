@@ -25,18 +25,20 @@ const Hive = () => {
     <SiGradle color={color} size={size} key={4} />,
   ];
   return (
-    <Box sx={{ backgroundColor: "#121212" }}>
+    <Box sx={{ backgroundColor: "#121212", paddingTop: "25vh" }}>
       <Box
         sx={{
           backgroundColor: "#121212",
           height: "calc(125vh - 225px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
           }}
         >
           <Typography variant="h1" sx={{ color: "#faa91e" }}>
@@ -47,12 +49,17 @@ const Hive = () => {
           </Typography>
           <GiArtificialHive size="8rem" color="#faa91e" />
         </Box>
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "row",
+          }}
+        >
           <Typography
             variant="h5"
             sx={{
-              paddingLeft: "2rem",
-              paddingBottom: "3rem",
               color: "#fbfbfbfb",
             }}
           >
@@ -62,16 +69,15 @@ const Hive = () => {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "flex-end",
+            justifyContent: "flex",
             alignItems: "center",
-            flexDirection: "row-reverse",
-            position: "absolute",
-            top: "calc(175vh - 10px)",
-            left: "calc(50vw - 200px)",
+            flexDirection: "row",
+            paddingTop: "5rem",
+            paddingLeft: "12rem",
           }}
         >
           <Image
-            src="/static/images/badges_hive.png"
+            src="/static/images/cours_hive.png"
             alt="Picture of the author"
             width={350}
             height={600}
@@ -79,6 +85,7 @@ const Hive = () => {
           <Typography
             variant="h5"
             sx={{
+              width: "25%",
               marginLeft: "4rem",
               color: "#fbfbfbfb",
             }}
@@ -89,22 +96,22 @@ const Hive = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
+            justifyContent: "",
             alignItems: "center",
-            position: "absolute",
-            left: "0",
+            flexDirection: "row-reverse",
+            paddingRight: "10rem",
           }}
         >
           <Image
-            src="/static/images/cours_hive.png"
+            src="/static/images/badges_hive.png"
             alt="Picture of the author"
-            width={225}
-            height={400}
+            width={350}
+            height={600}
           ></Image>
           <Typography
             variant={"h5"}
             sx={{
+              width: "25%",
               color: "#fbfbfbfb",
             }}
           >
@@ -112,7 +119,12 @@ const Hive = () => {
           </Typography>
         </Box>
       </Box>
-      <Box>
+      <Box
+        sx={{
+          backgroundColor: "#121212",
+          paddingTop: "15rem",
+        }}
+      >
         <Typography
           sx={{
             alignSelf: "center",

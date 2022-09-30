@@ -9,7 +9,7 @@ const AboutMe = (props) => {
 
   const maDiv = document.getElementById("about-me");
   if (maDiv) {
-    maDiv.style.backgroundImage = `url(/static/images/code.png)`;
+    maDiv.style.backgroundImage = `url(/static/images/code.jpg)`;
     maDiv.style.backgroundSize = "100% 100%";
     maDiv.style.backgroundRepeat = "no-repeat";
     maDiv.style.backgroundColor = "";
