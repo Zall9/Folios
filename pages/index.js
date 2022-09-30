@@ -26,23 +26,23 @@ export default function Home() {
   }, []);
   return (
     <>
-      (
-      <>
-        <Appbar></Appbar>
-        <AboutMe></AboutMe>
-        <Hive></Hive>
-        <Box
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {/* <TimelineExp></TimelineExp> */}
-        </Box>
-      </>
-      )
+      {
+        <>
+          <Appbar></Appbar>
+          <AboutMe></AboutMe>
+          <Hive></Hive>
+          <Box
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {/* <TimelineExp></TimelineExp> */}
+          </Box>
+        </>
+      }
     </>
   );
 }
