@@ -151,10 +151,10 @@ const Hive = (props) => {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "",
+            justifyContent: "flex",
             alignItems: "center",
             flexDirection: "row-reverse",
-            paddingRight: "10rem",
+            paddingRight: "8rem",
           }}
         >
           <Image
@@ -168,9 +168,10 @@ const Hive = (props) => {
             sx={{
               width: "25%",
               color: "#fbfbfbfb",
+              paddingRight: "4rem",
             }}
           >
-            {db.cv[2].content1}
+            {db.cv[2].content2}
           </Typography>
         </Box>
       </Box>

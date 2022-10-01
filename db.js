@@ -154,9 +154,9 @@ export const db = {
       description:
         " Application Android centrée sur le partage de documents pédagogiques",
       content1:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "Hive est un réseau social où les utilisateurs peuvent partager des documents autours de différents sujets auxquels ils sont abonnés..",
       content2:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "Des badges sont attribués aux utilisateurs en fonction de leur activité sur le réseau social.",
       technologies: ["A.Studio", "Java", "PHP", "MySQL", "Gradle"],
     },
     {

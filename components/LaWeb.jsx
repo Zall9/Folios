@@ -198,7 +198,7 @@ const LaWeb = (props) => {
             padding: "1rem",
           }}
         >
-          {"Réalisation de plusieures API Rest en TypeScript"}
+          {"Réalisation de plusieurs API Rest en TypeScript"}
         </Typography>
 
         <Box

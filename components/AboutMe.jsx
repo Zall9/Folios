@@ -46,7 +46,7 @@ const AboutMe = (props) => {
                   display: "flex",
                 }}
               >
-                <Slide direction="right" in={true} mountOnEnter unmountOnExit>
+                <Slide direction="right" in={IN} mountOnEnter unmountOnExit>
                   <Typography
                     sx={{
                       color: "#fbfbfbfb",
@@ -58,7 +58,7 @@ const AboutMe = (props) => {
                     {item.title.split(" ")[0]}&nbsp;
                   </Typography>
                 </Slide>
-                <Fade in={true} mountOnEnter unmountOnExit>
+                <Fade in={IN} mountOnEnter unmountOnExit>
                   <Typography
                     sx={{
                       color: "rgb(129, 156, 216)",
@@ -70,7 +70,7 @@ const AboutMe = (props) => {
                     {item.title.split(" ")[1].split(["lifer"])}
                   </Typography>
                 </Fade>
-                <Fade in={true} mountOnEnter unmountOnExit>
+                <Fade in={IN} mountOnEnter unmountOnExit>
                   <Typography
                     sx={{
                       color: "#fbfbfbfb",
@@ -84,7 +84,7 @@ const AboutMe = (props) => {
                   </Typography>
                 </Fade>
               </Box>
-              <Slide direction="left" in={true} mountOnEnter>
+              <Slide direction="left" in={IN} mountOnEnter>
                 <Box sx={{ marginLeft: "6%" }}>
                   <Typography
                     sx={{
@@ -96,7 +96,7 @@ const AboutMe = (props) => {
                   </Typography>
                 </Box>
               </Slide>
-              <Slide direction="left" in={true} mountOnEnter>
+              <Slide direction="left" in={IN} mountOnEnter>
                 <Box sx={{ marginLeft: "12%" }}>
                   <Typography
                     sx={{
@@ -117,11 +117,7 @@ const AboutMe = (props) => {
                   marginLeft: "3%",
                 }}
               >
-                <Zoom
-                  in={true}
-                  style={{ transitionDelay: "750ms" }}
-                  mountOnEnter
-                >
+                <Zoom in={1} style={{ transitionDelay: "750ms" }} mountOnEnter>
                   <Box sx={{ paddingBottom: "6rem" }}>
                     <LkIcon></LkIcon>
                   </Box>
