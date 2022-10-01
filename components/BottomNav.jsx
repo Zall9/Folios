@@ -10,51 +10,54 @@ import { GiArtificialHive } from "react-icons/gi";
 import { SiSololearn } from "react-icons/si";
 import { ImMail } from "react-icons/im";
 import { HiInformationCircle } from "react-icons/hi";
-const actions = [
-  {
-    icon: <HiInformationCircle />,
-    name: "A propos",
-    handleClick: (event) => {
-      //scroll to #about
-      document.getElementById("about").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    },
-  },
-  {
-    icon: <GiArtificialHive />,
-    name: "Hive",
-    handleClick: (event) => {
-      document.getElementById("hive").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    },
-  },
-  {
-    icon: <SiSololearn />,
-    name: "LaWeb",
-    handleClick: (event) => {
-      document.getElementById("laweb").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    },
-  },
-  {
-    icon: <ImMail />,
-    name: "Contact",
-    handleClick: (event) => {
-      console.log(event);
-    },
-  },
-];
+import { useRouter } from "next/router";
+
 const BottomNav = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const router = useRouter();
 
+  const actions = [
+    {
+      icon: <HiInformationCircle />,
+      name: "A propos",
+      handleClick: (event) => {
+        //scroll to #about
+        document.getElementById("about").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      },
+    },
+    {
+      icon: <GiArtificialHive />,
+      name: "Hive",
+      handleClick: (event) => {
+        document.getElementById("hive").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      },
+    },
+    {
+      icon: <SiSololearn />,
+      name: "LaWeb",
+      handleClick: (event) => {
+        document.getElementById("laweb").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      },
+    },
+    {
+      icon: <ImMail />,
+      name: "Contact",
+      handleClick: (event) => {
+        router.push("mailto:paul.delifer@yahoo.com");
+      },
+    },
+  ];
   return (
     <Box
       //style that make the box and its content always at the bottom of the screen
