@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 
 const CardItem = ({ data }) => {
-  console.log("_data", data);
   return (
     <Card
       sx={{

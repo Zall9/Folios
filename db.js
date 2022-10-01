@@ -161,10 +161,10 @@ export const db = {
     },
     {
       id: "4",
-      title: "LAWEB",
+      title: "LaWeb",
       date: "1640993591",
       description:
-        "API REST et leurs documentations pour un jeu serieux ainsi qu'une interface d'analyse de données pédagogiques en temps réel",
+        "API REST et documentations openAPI & AsyncAPI pour un jeu serieux ainsi qu'une interface d'analyse de données pédagogiques en temps réel",
       technologies: [
         "Docker",
         "NodeJS",
@@ -183,9 +183,10 @@ export const db = {
     },
     {
       id: "5",
-      title: "LAWEB",
+      title: "LaWeb",
       date: "1654036391",
-      description: "site de reservation dans un salon de coiffure",
+      description:
+        "API REST et leurs documentations pour un jeu serieux ainsi qu'une interface d'analyse de données pédagogiques en temps réel",
       technologies: [
         "NodeJS",
         "Javascript",

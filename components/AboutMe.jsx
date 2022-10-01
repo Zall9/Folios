@@ -5,7 +5,6 @@ import { db } from "../db";
 import { useEffect } from "react";
 const AboutMe = (props) => {
   // const [data, setData] = useState([]);
-  const backgroundImage = "";
   const data = db.about;
   useEffect(() => {
     return () => {
@@ -21,13 +20,13 @@ const AboutMe = (props) => {
 
   return (
     <Box
+      id="about-me"
       sx={{
         backgroundColor: "#121212",
         height: "calc(100vh - 60px)",
       }}
     >
       <Box
-        id="about-me"
         sx={{
           height: "100%",
         }}
@@ -116,9 +115,9 @@ const AboutMe = (props) => {
                   style={{ transitionDelay: "750ms" }}
                   mountOnEnter
                 >
-                  <div>
+                  <Box>
                     <LkIcon></LkIcon>
-                  </div>
+                  </Box>
                 </Zoom>
               </Box>
             </Box>

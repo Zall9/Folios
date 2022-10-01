@@ -8,7 +8,6 @@ import { DiGit } from "react-icons/di";
 import { RiFlutterFill } from "react-icons/ri";
 const Skills = (props) => {
   const lastYpos = props.lastYpos;
-  console.log("last", lastYpos);
   const data = db.skills;
   const IN = lastYpos > 0.35 && lastYpos < 1;
   const iconList = [
@@ -26,7 +25,6 @@ const Skills = (props) => {
   data.forEach((v, index) => {
     v.icon = iconList[0];
   });
-  console.log("DATA ", data);
   return (
     <Box
       sx={{

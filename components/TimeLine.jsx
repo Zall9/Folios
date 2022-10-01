@@ -10,8 +10,7 @@ import { Box, Grow, Typography } from "@mui/material";
 import { db } from "../db";
 const TimeLine = (props) => {
   const data = db.experiences;
-  console.log("data", data);
-  console.log("db", db);
+
   const colors = [
     "primary",
     "secondary",

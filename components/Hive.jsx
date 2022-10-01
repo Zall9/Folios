@@ -12,10 +12,10 @@ import {
   SiMysql,
   SiGradle,
 } from "react-icons/si";
-const Hive = () => {
+const Hive = (props) => {
+  const IN = props.in;
   const data = db.cv[2];
-  console.log("dataHS", data);
-  const size = 112;
+  const size = "6rem";
   const color = "#f5f5f5";
   const style = {
     ".changeColor": {
@@ -75,11 +75,16 @@ const Hive = () => {
     </span>,
   ];
   return (
-    <Box sx={{ backgroundColor: "#121212", paddingTop: "28vh" }}>
+    <Box
+      sx={{
+        height: "calc(125vh px)",
+        backgroundColor: "#121212",
+        paddingTop: "3rem",
+      }}
+    >
       <Box
         sx={{
           backgroundColor: "#121212",
-          height: "calc(125vh - 225px)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -175,56 +180,58 @@ const Hive = () => {
           paddingTop: "15rem",
         }}
       >
-        <Typography
-          sx={{
-            alignSelf: "center",
-            color: "#fbfbfbfb",
-            fontSize: "3rem",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {"Technologies Utilisées"}
-        </Typography>
-
-        <Box
-          sx={{
-            backgroundColor: "#121212",
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex",
-            flexDirection: "row",
-          }}
-        >
-          <>
-            {icons.map((item, index) => {
-              return (
-                //center the box content please
-                <>
-                  <Box
-                    key={index + "root"}
-                    sx={{
-                      display: "inline-flex",
-                      flexDirection: "column-reverse",
-                      alignItems: "center",
-                    }}
-                  >
+        <Slide direction="up" in={IN} timeout={1000} unmountOnExit>
+          <Typography
+            sx={{
+              alignSelf: "center",
+              color: "#fbfbfbfb",
+              fontSize: "3rem",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            {"Technologies Utilisées"}
+          </Typography>
+        </Slide>
+        <Slide direction="down" in={IN} timeout={1000} unmountOnExit>
+          <Box
+            sx={{
+              backgroundColor: "#121212",
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <>
+              {icons.map((item, index) => {
+                return (
+                  //center the box content please
+                  <>
                     <Box
-                      key={index + item + "key"}
-                      //position relative to the end of the component
-                      sx={{}}
+                      key={index + "root"}
+                      sx={{
+                        display: "inline-flex",
+                        flexDirection: "column-reverse",
+                        alignItems: "center",
+                      }}
                     >
-                      {item}
+                      <Box
+                        key={index + item + "key"}
+                        //position relative to the end of the component
+                      >
+                        {item}
+                      </Box>
+                      <Typography variant="h6" sx={{ color: "#fbfbfbfb" }}>
+                        {data.technologies[index]}
+                      </Typography>
                     </Box>
-                    <Typography variant="h6" sx={{ color: "#fbfbfbfb" }}>
-                      {data.technologies[index]}
-                    </Typography>
-                  </Box>
-                </>
-              );
-            })}
-          </>
-        </Box>
+                  </>
+                );
+              })}
+            </>
+          </Box>
+        </Slide>
       </Box>
     </Box>
   );

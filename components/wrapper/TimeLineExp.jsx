@@ -47,7 +47,6 @@ const TimelineExp = (props) => {
   data.map((item) => {
     VALUES.push(convertTimestampToDate(item.date));
   });
-  console.log("VALUES", VALUES);
 
   const dataWithoutDateAndId = data.map(({ id, ...rest }) => rest);
   const listIcon = [
