@@ -9,17 +9,6 @@ const AboutMe = (props) => {
   // const [data, setData] = useState([]);
   const data = db.about;
   const IN = props.in;
-  useEffect(() => {
-    return () => {
-      // const maDiv = document?.getElementById("about-me");
-      // if (maDiv) {
-      //   maDiv.style.backgroundImage : `url('${bg.src}')`,
-      //   maDiv.style.backgroundSize : "100% 100%",
-      //   maDiv.style.backgroundRepeat : "no-repeat",
-      //   maDiv.style.backgroundColor : "",
-      // }
-    };
-  }, []);
 
   return (
     <Box
@@ -29,7 +18,6 @@ const AboutMe = (props) => {
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         backgroundColor: "",
-
         height: "calc(100vh - 60px)",
       }}
     >

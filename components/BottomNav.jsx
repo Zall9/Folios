@@ -11,15 +11,50 @@ import { SiSololearn } from "react-icons/si";
 import { ImMail } from "react-icons/im";
 import { HiInformationCircle } from "react-icons/hi";
 const actions = [
-  { icon: <HiInformationCircle />, name: "A propos" },
-  { icon: <GiArtificialHive />, name: "Hive" },
-  { icon: <SiSololearn />, name: "LaWeb" },
-  { icon: <ImMail />, name: "Contact" },
+  {
+    icon: <HiInformationCircle />,
+    name: "A propos",
+    handleClick: (event) => {
+      //scroll to #about
+      document.getElementById("about").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    },
+  },
+  {
+    icon: <GiArtificialHive />,
+    name: "Hive",
+    handleClick: (event) => {
+      document.getElementById("hive").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    },
+  },
+  {
+    icon: <SiSololearn />,
+    name: "LaWeb",
+    handleClick: (event) => {
+      document.getElementById("laweb").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    },
+  },
+  {
+    icon: <ImMail />,
+    name: "Contact",
+    handleClick: (event) => {
+      console.log(event);
+    },
+  },
 ];
 const BottomNav = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
   return (
     <Box
       //style that make the box and its content always at the bottom of the screen
@@ -47,7 +82,7 @@ const BottomNav = () => {
             icon={action.icon}
             tooltipTitle={action.name}
             tooltipOpen
-            onClick={handleClose}
+            onClick={action.handleClick}
           />
         ))}
       </SpeedDial>

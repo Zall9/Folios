@@ -27,7 +27,9 @@ export default function Home() {
   return (
     <Box>
       <>
+        <a id="about" href="#about"></a>
         <AboutMe in={lastYpos < 0.1}></AboutMe>
+        <a id="hive" href="#hive"></a>
         <Hive in={lastYpos > 0.52 && lastYpos < 0.8}></Hive>
         {
           <Box
@@ -41,6 +43,7 @@ export default function Home() {
           >
             {/* <TimelineExp></TimelineExp> */}
             <Box sx={{ paddingTop: "8rem" }}>
+              <a id="laweb" href="#laweb"></a>
               <LaWeb in={lastYpos > 0.93}></LaWeb>
             </Box>
           </Box>
