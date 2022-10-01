@@ -40,8 +40,8 @@ const LaWeb = () => {
     <Image
       src="/static/images/stageLA.gif"
       alt="Picture of the author"
-      width={2555}
-      height={500}
+      width={1195}
+      height={396}
     />
   );
 
@@ -161,7 +161,7 @@ const LaWeb = () => {
   ];
 
   return (
-    <Box sx={{}}>
+    <>
       <Box
         sx={{
           display: "flex",
@@ -177,28 +177,105 @@ const LaWeb = () => {
         </Typography>
         <SiSololearn size={size} color="#d42626" />
       </Box>
-      <Box>
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          flexDirection: "row",
+          paddingRight: "3rem",
+          paddingTop: "6rem",
+        }}
+      >
         <Typography
-          variant="h5"
+          variant="h6"
           sx={{
+            color: "#fbfbfbfb",
+            textAlign: "center",
+            padding: "1rem",
+          }}
+        >
+          {"Réalisation de plusieures API Rest en TypeScript"}
+        </Typography>
+
+        <Box
+          sx={{
+            width: "45%",
+          }}
+        >
+          <Image
+            src="/static/images/Swagger.png"
+            alt="Picture of the author"
+            width={1247}
+            height={788}
+          />
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          paddingTop: "3rem",
+          width: "85%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "row",
+          margin: "auto",
+        }}
+      >
+        {laGif}
+        <Typography
+          variant="h6"
+          sx={{
+            paddingLeft: "3rem",
             color: "#fbfbfbfb",
           }}
         >
-          {DATA[0].description}
+          {
+            "Réalisation d'une interface d'analyse de données pédagogiques en temps réel"
+          }
         </Typography>
       </Box>
-
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          paddingTop: "3rem",
         }}
       >
+        <Typography
+          variant="h2"
+          sx={{
+            color: "#fbfbfbfb",
+          }}
+        >
+          {"Vidéo de présentation du projet"}
+        </Typography>
         <YoutubeEmbed embedId="_uA-jin1DMk" />
 
-        <Grid container spacing={2}>
+        <Typography
+          sx={{
+            alignSelf: "center",
+            color: "#fbfbfbfb",
+            fontSize: "3rem",
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "3rem",
+          }}
+        >
+          {"Technologies Utilisées"}
+        </Typography>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            paddingTop: "3rem",
+          }}
+        >
           {icons.map((item, index) => {
             return (
               <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
@@ -225,7 +302,7 @@ const LaWeb = () => {
           })}
         </Grid>
       </Box>
-    </Box>
+    </>
   );
 };
 

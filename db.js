@@ -172,7 +172,7 @@ export const db = {
         "Javascript",
         "MongoDB",
         "Mongoose",
-        "SocketIo",
+        "Socket:Io",
         "Swagger",
         "OpenAPI",
         "AsyncAPI",
