@@ -1,6 +1,5 @@
 import { Box } from "@mui/system";
-import Appbar from "../components/Appbar";
-import CardGrid from "../components/wrapper/CardGrid";
+
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import {
@@ -12,10 +11,8 @@ import {
 } from "@mui/material";
 import Skills from "../components/wrapper/Skills";
 import AboutMe from "../components/AboutMe";
-import TimelineExp from "../components/wrapper/TimeLineExp";
 import Hive from "../components/Hive";
 import LaWeb from "../components/LaWeb";
-import ButtonMailTo from "../components/ButtonMailTo";
 import BottomNav from "../components/BottomNav";
 
 export default function Home() {
@@ -30,8 +27,8 @@ export default function Home() {
   return (
     <Box>
       <>
-        <AboutMe></AboutMe>
-        <Hive in={lastYpos > 0.1}></Hive>
+        <AboutMe in={lastYpos < 0.1}></AboutMe>
+        <Hive in={lastYpos > 0.52 && lastYpos < 0.8}></Hive>
         {
           <Box
             sx={{
@@ -44,7 +41,7 @@ export default function Home() {
           >
             {/* <TimelineExp></TimelineExp> */}
             <Box sx={{ paddingTop: "8rem" }}>
-              <LaWeb></LaWeb>
+              <LaWeb in={lastYpos > 0.93}></LaWeb>
             </Box>
           </Box>
         }

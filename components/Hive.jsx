@@ -180,7 +180,7 @@ const Hive = (props) => {
           paddingTop: "15rem",
         }}
       >
-        <Slide direction="up" in={IN} timeout={1000} unmountOnExit>
+        <Slide direction="left" in={IN} timeout={1000}>
           <Typography
             sx={{
               alignSelf: "center",
@@ -193,7 +193,7 @@ const Hive = (props) => {
             {"Technologies Utilisées"}
           </Typography>
         </Slide>
-        <Slide direction="down" in={IN} timeout={1000} unmountOnExit>
+        <Slide direction="right" in={IN} timeout={1000}>
           <Box
             sx={{
               backgroundColor: "#121212",

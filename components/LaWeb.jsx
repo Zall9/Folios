@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Grow, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Image from "next/image";
 import React from "react";
@@ -19,7 +19,8 @@ import {
 } from "react-icons/si";
 import { GiRabbitHead } from "react-icons/gi";
 import { FaSync } from "react-icons/fa";
-const LaWeb = () => {
+const LaWeb = (props) => {
+  const IN = props.in;
   const style = {
     ".changeColor": {
       color: "#f5f5f5",
@@ -269,38 +270,40 @@ const LaWeb = () => {
         >
           {"Technologies Utilisées"}
         </Typography>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            paddingTop: "3rem",
-          }}
-        >
-          {icons.map((item, index) => {
-            return (
-              <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column-reverse",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {item}
-                  <Typography
-                    variant="h6"
+        <Grow in={IN} style={{ transformOrigin: "0 0 0" }}>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              paddingTop: "3rem",
+            }}
+          >
+            {icons.map((item, index) => {
+              return (
+                <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
+                  <Box
                     sx={{
-                      color: "#fbfbfbfb",
+                      display: "flex",
+                      flexDirection: "column-reverse",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
-                    {DATA[0].technologies[index]}
-                  </Typography>
-                </Box>
-              </Grid>
-            );
-          })}
-        </Grid>
+                    {item}
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#fbfbfbfb",
+                      }}
+                    >
+                      {DATA[0].technologies[index]}
+                    </Typography>
+                  </Box>
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Grow>
       </Box>
     </>
   );

@@ -3,18 +3,21 @@ import { Box } from "@mui/system";
 import LkIcon from "./LkIcon";
 import { db } from "../db";
 import { useEffect } from "react";
+import bg from "../public/static/images/code.jpg";
+
 const AboutMe = (props) => {
   // const [data, setData] = useState([]);
   const data = db.about;
+  const IN = props.in;
   useEffect(() => {
     return () => {
-      const maDiv = document?.getElementById("about-me");
-      if (maDiv) {
-        maDiv.style.backgroundImage = `url(/static/images/code.jpg)`;
-        maDiv.style.backgroundSize = "100% 100%";
-        maDiv.style.backgroundRepeat = "no-repeat";
-        maDiv.style.backgroundColor = "";
-      }
+      // const maDiv = document?.getElementById("about-me");
+      // if (maDiv) {
+      //   maDiv.style.backgroundImage : `url('${bg.src}')`,
+      //   maDiv.style.backgroundSize : "100% 100%",
+      //   maDiv.style.backgroundRepeat : "no-repeat",
+      //   maDiv.style.backgroundColor : "",
+      // }
     };
   }, []);
 
@@ -22,7 +25,11 @@ const AboutMe = (props) => {
     <Box
       id="about-me"
       sx={{
-        backgroundColor: "#121212",
+        backgroundImage: `url('${bg.src}')`,
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "",
+
         height: "calc(100vh - 60px)",
       }}
     >
@@ -115,7 +122,7 @@ const AboutMe = (props) => {
                   style={{ transitionDelay: "750ms" }}
                   mountOnEnter
                 >
-                  <Box>
+                  <Box sx={{ paddingBottom: "6rem" }}>
                     <LkIcon></LkIcon>
                   </Box>
                 </Zoom>
