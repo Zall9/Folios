@@ -190,7 +190,7 @@ const LaWeb = () => {
         }}
       >
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             color: "#fbfbfbfb",
             textAlign: "center",
@@ -227,14 +227,14 @@ const LaWeb = () => {
       >
         {laGif}
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             paddingLeft: "3rem",
             color: "#fbfbfbfb",
           }}
         >
           {
-            "Réalisation d'une interface d'analyse de données pédagogiques en temps réel"
+            "Réalisation d'une interface en React permettant l'analyse des données pédagogiques en temps réel"
           }
         </Typography>
       </Box>

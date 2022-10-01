@@ -15,6 +15,8 @@ import AboutMe from "../components/AboutMe";
 import TimelineExp from "../components/wrapper/TimeLineExp";
 import Hive from "../components/Hive";
 import LaWeb from "../components/LaWeb";
+import ButtonMailTo from "../components/ButtonMailTo";
+import BottomNav from "../components/BottomNav";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -26,26 +28,28 @@ export default function Home() {
     });
   }, []);
   return (
-    <>
-      <Appbar></Appbar>
-      <AboutMe></AboutMe>
-      <Hive in={lastYpos > 0.1}></Hive>
-      {
-        <Box
-          sx={{
-            backgroundColor: "#000000",
-            justifyContent: "center",
-            alignItems: "center",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {/* <TimelineExp></TimelineExp> */}
-          <Box sx={{ paddingTop: "8rem" }}>
-            <LaWeb></LaWeb>
+    <Box>
+      <>
+        <AboutMe></AboutMe>
+        <Hive in={lastYpos > 0.1}></Hive>
+        {
+          <Box
+            sx={{
+              backgroundColor: "#000000",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {/* <TimelineExp></TimelineExp> */}
+            <Box sx={{ paddingTop: "8rem" }}>
+              <LaWeb></LaWeb>
+            </Box>
           </Box>
-        </Box>
-      }
-    </>
+        }
+        <BottomNav></BottomNav>
+      </>
+    </Box>
   );
 }

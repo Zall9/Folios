@@ -164,7 +164,7 @@ const Hive = (props) => {
             height={600}
           ></Image>
           <Typography
-            variant={"h5"}
+            variant="h5"
             sx={{
               width: "25%",
               color: "#fbfbfbfb",
